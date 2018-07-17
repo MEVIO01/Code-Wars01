@@ -1,0 +1,19 @@
+# https://www.codewars.com/kata/naughty-or-nice-2/train/python
+
+def what_list_am_i_on(actions):
+    good_actios = 0
+    bad_actions = 0
+    for i in actions :
+        if i[0] == 'b' or i[0] == 'f' or i[0] == 'k':
+            good_actions+=1
+        elif i[0] == 'g' or i[0] == 's' or i[0] == 'n':
+            bad_actions+=1
+        else: 
+            good_actions+=0
+            bad_actions+=0
+    if good_actions < bad_actions:
+        return "Naughty"
+    elif good_actions > bad_actions:
+        return "Nice"
+    else:
+        return "Neither"
