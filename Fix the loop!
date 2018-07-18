@@ -1,0 +1,9 @@
+# https://www.codewars.com/kata/fix-the-loop/train/python
+
+def list_animals(animals):
+    temp_int_varriable = 0
+    list = ''
+    for i in animals:
+        temp_int_varriable+=1
+        list += str(temp_int_varriable) + '. ' + i + '\n'
+    return list
