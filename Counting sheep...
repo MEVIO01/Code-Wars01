@@ -1,0 +1,8 @@
+# https://www.codewars.com/kata/counting-sheep-dot-dot-dot/train/python
+
+def count_sheeps(arrayOfSheeps):
+    present_sheep = 0
+    for i in arrayOfSheeps:
+        if i == True:
+            present_sheep+=1
+    return present_sheep 
