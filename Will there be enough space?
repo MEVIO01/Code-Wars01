@@ -1,0 +1,8 @@
+# https://www.codewars.com/kata/will-there-be-enough-space/train/python
+
+def enough(cap, on, wait):
+    free_current_amount = cap - on
+    if free_current_amount >= wait:
+        return 0
+    else:
+        return wait - free_current_amount
