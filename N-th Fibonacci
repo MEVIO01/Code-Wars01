@@ -1,0 +1,15 @@
+# https://www.codewars.com/kata/n-th-fibonacci/train/python
+
+def nth_fib(n):
+    first_var = 0
+    second_var = 1
+    third_var = 0
+    temp_var = 0
+    array_of_fibo_digits = [0,1]
+    while temp_var <= n:
+        third_var = first_var + second_var
+        array_of_fibo_digits.append(third_var)
+        first_var = second_var
+        second_var = third_var
+        temp_var += 1
+    return array_of_fibo_digits[n-1]
