@@ -1,5 +1,5 @@
 # https://www.codewars.com/kata/list-filtering/train/python
 
 def filter_list(l):
-    final = [elem for elem in l if type(elem) is int]
-    return final       
+    return [elem for elem in l if type(elem) is int] 
+          
