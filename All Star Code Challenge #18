@@ -1,0 +1,9 @@
+# http://www.codewars.com/kata/all-star-code-challenge-number-18/train/python
+
+def str_count(strng, letter):
+    strng = list(strng)
+    temp = 0
+    for i in strng:
+        if i == letter:
+            temp+=1
+    return temp  
