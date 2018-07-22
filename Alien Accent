@@ -1,0 +1,5 @@
+# https://www.codewars.com/kata/alien-accent/train/python
+
+def convert(st):
+    st = st.replace("o","u")
+    return st.replace("a", "o")
