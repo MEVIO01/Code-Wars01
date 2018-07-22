@@ -1,0 +1,7 @@
+# https://www.codewars.com/kata/587a75dbcaf9670c32000292/solutions/python
+
+def filter_words(st):
+    st = st.lower()
+    temp = st[0]
+    st = st[1:]
+    return ' '.join(str(temp.upper() + st).split())
