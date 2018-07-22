@@ -1,0 +1,6 @@
+# https://www.codewars.com/kata/reversing-words-in-a-string/train/python
+
+def reverse(st):
+    st = st.split(" ")
+    st = st[-1::-1]
+    return  ' '.join(st)
