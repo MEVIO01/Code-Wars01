@@ -1,0 +1,13 @@
+# https://www.codewars.com/kata/make-a-square-box/train/python
+
+def box(n):
+    arr = []
+    first_and_last_str = "-"*n
+    between_str = "-"+(" "*(n-2))+"-"
+    arr.append(first_and_last_str)
+    temp = 0
+    while temp < (n-2):
+        arr.append(between_str)
+        temp += 1
+    arr.append(first_and_last_str)
+    return arr
