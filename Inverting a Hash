@@ -1,0 +1,7 @@
+# https://www.codewars.com/kata/inverting-a-hash/train/python
+
+def invert_hash(dictionary):
+    final_dict = {}
+    for key, value in dictionary.items():
+        final_dict.update({value : key})
+    return final_dict
