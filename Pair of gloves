@@ -1,0 +1,8 @@
+# https://www.codewars.com/kata/pair-of-gloves/train/python
+
+def number_of_pairs(gloves):
+    pairs = 0
+    for item in set(gloves):
+        if gloves.count(item) >=2:
+           pairs += gloves.count(item) // 2    
+    return pairs   
