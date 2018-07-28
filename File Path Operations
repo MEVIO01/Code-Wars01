@@ -1,0 +1,35 @@
+# https://www.codewars.com/kata/file-path-operations/train/python
+
+class FileMaster():
+    def __init__(self, filepath):
+        self.filepath = filepath
+    def extension(self):
+        reversed_filepath = self.filepath[::-1]
+        ext = ""
+        for symbol in reversed_filepath:
+            if symbol == ".":
+                break
+            else:
+                ext += symbol
+        return ext[::-1]        
+    def filename(self):
+        reversed_filepath = self.filepath[::-1]
+        name = ""
+        ext = 0
+        for symbol in reversed_filepath:
+            if symbol == ".":
+                ext += len(name)
+            elif symbol == "/":
+                break
+            else:
+                name += symbol
+        return name[::-1][:-ext]      
+    def dirpath(self):
+        reversed_filepath = self.filepath[::-1]
+        removing_amount = 0 
+        for symbol in reversed_filepath:
+            if symbol != "/":
+                removing_amount += 1
+            else:
+                break
+        return self.filepath[:-removing_amount] 
