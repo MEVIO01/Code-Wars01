@@ -10,6 +10,3 @@ class Dictionary():
             return self.dict[key]
         else:
             return "Can't find entry for " + key
-d = Dictionary()
-d.newentry('Apple', 'A fruit that grows on trees')
-print(d.look('Apple'))
