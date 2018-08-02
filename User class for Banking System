@@ -1,0 +1,23 @@
+# https://www.codewars.com/kata/user-class-for-banking-system/train/python
+
+class User(object):
+    def __init__(self, name, balance, checking_account):
+        self.name = name
+        self.balance = balance
+        self.checking_account = checking_account
+    def withdraw(self,amount):
+        if self.balance >= amount:
+            self.balance -= amount
+            return self.name+" has "+str(self.balance)+"."
+        else:
+            raise ValueError()
+    def check(self, user, amount):
+        if user.checking_account == True and amount <= user.balance:
+            self.balance += amount
+            user.balance -= amount
+            return self.name+" has "+str(self.balance)+" and "+user.name+" has "+str(user.balance)+"."
+        else:
+            raise ValueError()
+    def add_cash(self, amount):
+        self.balance += amount
+        return self.name+" has "+str(self.balance)+"."
