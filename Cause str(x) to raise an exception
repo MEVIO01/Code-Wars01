@@ -1,0 +1,5 @@
+# https://www.codewars.com/kata/cause-str-x-to-raise-an-exception/train/python
+
+x = []
+for i in range(1000):
+    x = [x]
