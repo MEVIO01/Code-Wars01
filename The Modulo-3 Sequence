@@ -1,0 +1,5 @@
+# https://www.codewars.com/kata/the-modulo-3-sequence/train/python
+
+def sequence(n):
+    seq = [0,1,1,2,0,2,2,1] 
+    return seq[n % 8 - 1]
