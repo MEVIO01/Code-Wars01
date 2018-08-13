@@ -1,0 +1,23 @@
+# https://www.codewars.com/kata/plotting-points-on-a-grid/train/python
+
+class Grid():
+    column = ""
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+        global column
+        column = "0"*width + "\n"
+        self.grid = column*self.height
+        self.grid = self.grid[:-1]
+    def plot_point(self, x, y):
+        if y > 1:
+            global column
+            elem = len(column)*(y-1) + x
+        else:
+            elem = (x * y)      
+        self.grid = list(self.grid)
+        self.grid[elem - 1] = 'X'
+        self.grid = ''.join(self.grid)
+        return self.grid, elem
+    def __repr__(self):
+        return self.grid
