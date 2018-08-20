@@ -1,0 +1,11 @@
+def interpreter(tape, array):
+    bits = list(array)
+    index = 0
+    while True:
+        for i in tape:
+            if i == "1":
+               bits[index] = "0" if bits[index] == "1" else "1"
+            else:
+                index += 1
+                if index == len(array):
+                    return "".join(bits)
